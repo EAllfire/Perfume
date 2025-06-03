@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Perfumes.Site" %>
+<!DOCTYPE html>
+<html lang="es">
+<head runat="server">
+    <title>Tienda de Perfumes</title>
+    <link href="Content/estilo-dark.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <h1>Tienda de Perfumes</h1>
+            <nav>
+                <a href="Default.aspx">Inicio</a> |
+                <a href="Catalogo.aspx">Catálogo</a> |
+                <a href="Carrito.aspx">Carrito</a> |
+                <a id="adminLink" runat="server" href="PanelAdmin.aspx">Admin</a>
+                &nbsp;&nbsp;
+                <asp:Label ID="userInfo" runat="server" />
+                <asp:Button ID="btnLogout" runat="server" Text="Cerrar sesión" OnClick="btnLogout_Click" Visible="false" />
+            </nav>
+        </div>
+        <div class="main-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+        <div class="footer">
+            <p>&copy; 2025 Tienda de Perfumes</p>
+        </div>
+    </form>
+</body>
+</html>

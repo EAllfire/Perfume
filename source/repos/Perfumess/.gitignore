@@ -1,0 +1,8 @@
+# Archivos y carpetas que no deberían subirse
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.log
